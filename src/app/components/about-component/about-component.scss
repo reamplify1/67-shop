@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 0;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    span {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      color: #0056b3;
+      transform: translateX(-5px); 
+    }
+  }
+
+.about-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+
+  h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: #007bff;
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+  }
+
+  p {
+    color: #5a6772;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+}

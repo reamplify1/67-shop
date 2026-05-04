@@ -1,0 +1,19 @@
+.breadcrumbs {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: #f4f4f4;
+
+  .separator {
+    color: #999;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

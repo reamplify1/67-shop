@@ -1,0 +1,35 @@
+<div class="container">
+  @if (film()) {
+    <button class="back-btn" (click)="goBack()">← Назад</button>
+
+    <div class="film-content">
+      @let f = film()!;
+      <div class="poster-wrapper">
+        <img [src]="f.posterUrl" [alt]="f.title" class="poster">
+      </div>
+
+      <div class="info">
+        <div class="title-section">
+          <h1 class="title">{{ f.title }}</h1>
+          @if (f.isFavorite) {
+            <span class="favorite-badge">❤️</span>
+          }
+        </div>
+
+        <div class="meta">
+          <span class="rating">⭐ {{ f.rating }}</span>
+          <span class="year">{{ f.year }} г.</span>
+          <span class="duration">⏱️ {{ f.duration | timeCustomPipe }} </span>
+        </div>
+
+        <div class="genre-tag">{{ f.genre }}</div>
+
+        <p class="description">{{ f.description }}</p>
+
+        <div class="actions">
+          <button class="play-btn">Смотреть фильм</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

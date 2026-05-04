@@ -1,0 +1,22 @@
+<input
+  id="filter-films-input"
+  type="text"
+  [(ngModel)]="searchQuery"
+  appAutofocus
+  placeholder="Search films..."
+  class="filter-films-input"
+>
+
+<div class="films-wrapper">
+  @for (item of filmsService.filteredFilms(); track item.id) {
+    <app-film-card
+      [film]="item"
+      (toggleFavorite)="handleFavorite($event)"
+    />
+  } @empty {
+    <div class="nothing-found">
+      <p>Nothing found "{{ searchQuery }}" 🔍</p>
+    </div>
+  }
+</div>
+

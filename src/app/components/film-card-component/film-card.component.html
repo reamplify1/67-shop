@@ -1,0 +1,26 @@
+<div class="card" (click)="goToDetails()">
+  <img [src]="film.posterUrl" [alt]="film.title" class="card-img">
+  <div class="card-body">
+    <h3 class="card-title">{{ film.title }} <span>({{ film.year }})</span></h3>
+
+    <div class="card-info">
+      <span class="genre">{{ film.genre }}</span>
+      <span class="rating">⭐ {{ film.rating }}</span>
+    </div>
+
+    <p class="card-description">
+      {{ film.description }}
+    </p>
+
+    <div class="card-footer">
+      <span class="duration" >🕒 {{ film.duration | timeCustomPipe }} </span>
+      <button
+        class="favorite-btn"
+        (click)="onFavoriteClick($event)"
+        [class.is-fav]="film.isFavorite"
+      >
+        {{ film.isFavorite ? '❤️' : '🤍' }}
+      </button>
+    </div>
+  </div>
+</div>

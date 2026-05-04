@@ -1,0 +1,6 @@
+<nav class="breadcrumbs">
+  @for (item of breadcrumbsService.breadcrumbs(); track item.url) {
+    <a [routerLink]="item.url">{{ item.label }}</a>
+    <span class="separator"> / </span>
+  }
+</nav>
